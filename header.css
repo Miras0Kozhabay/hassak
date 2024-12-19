@@ -1,0 +1,164 @@
+
+header .logo{
+    position: absolute;
+    left: 120px;
+    top: 60px;
+}
+
+.header {
+    background-color: #030F27;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    height: 140px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    border-bottom: 1px solid #91A1BC; 
+}
+
+.header-container ul {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    list-style: none;
+    margin-top: 2px;
+    padding: 0;
+    font-size: 14px;
+}
+
+.header-container ul li {
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid #91A1BC; 
+}
+
+.header-container ul li:first-child,
+.header-container ul li:nth-child(2),
+.header-container ul li:nth-child(4) {
+    border-left: none; 
+}
+.header-container ul li:nth-child(4) {
+    margin-right: 250px; 
+
+}
+
+
+.header-container a {
+    text-decoration: none;
+    color: #91A1BC; 
+    font-weight: 400;
+    padding: 8px 1px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header-container span {
+    text-decoration: none;
+    color: #91A1BC; 
+    font-weight: 400;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header-container a:hover {
+    color: #492D91; 
+}
+
+.header-container ul li:nth-child(n+5) a:hover {
+    color: inherit; 
+    cursor:default
+}
+
+
+
+/* Navbar стили */
+
+.navbar {
+background-color: #fff;
+padding: 0;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);;
+display: flex;
+justify-content: center;
+padding: 10px 0;
+position: relative; 
+top: 140px;
+left: -30px;
+width: 105%; 
+z-index: 100; 
+transition: transform 0.5s ease, top 0.5s ease; 
+margin-top: 0; 
+transform: translateY(-100%); 
+height: 60px;
+}
+
+.navbar.fixed {
+    justify-content: center;
+position: fixed; 
+top: 40px; 
+left: 140px;
+width: 80%; 
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+transform: translateY(0); 
+}
+
+/* animation */
+.navbar.fixed {
+animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+0% {
+transform: translateY(-100%); 
+}
+100% {
+transform: translateY(0); 
+}
+}
+
+
+/* Стиль для ссылок в навбаре */
+.navbar ul {
+list-style: none;
+margin-top: 20px;
+padding: 0;
+display: flex;
+}
+
+
+.navbar a:hover{
+    content: "";
+    height:130%;
+    width: 100%;    
+}
+
+.navbar a:hover::after{
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: -1px; 
+    width: 80%;
+    height: 2px;
+    background-color: #492D91;
+}
+
+.navbar a {
+    position: relative;
+text-decoration: none;
+color: #333;
+font-weight: 400;
+padding: 8px 15px;
+transition: background-color 0.3s, color 0.3s;
+}
+
+
+
